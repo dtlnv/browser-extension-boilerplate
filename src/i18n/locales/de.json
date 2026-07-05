@@ -1,0 +1,11 @@
+{
+  "ping-background": "Ping-Hintergrund",
+  "get-active-tab-info": "Informationen zum aktiven Tab abrufen",
+  "select-language": "Sprache auswählen",
+  "language-changed": "Neue Sprache: {language}",
+  "theme.light": "Hell",
+  "theme.dark": "Dunkel",
+  "theme.system": "System",
+  "select-theme": "Design auswählen",
+  "theme-changed": "Design wurde zu {theme} geändert"
+}

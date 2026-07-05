@@ -1,0 +1,11 @@
+{
+  "ping-background": "Ping em segundo plano",
+  "get-active-tab-info": "Obter informações do separador ativo",
+  "select-language": "Selecionar idioma",
+  "language-changed": "Novo idioma: {language}",
+  "theme.light": "Claro",
+  "theme.dark": "Escuro",
+  "theme.system": "Sistema",
+  "select-theme": "Selecionar tema",
+  "theme-changed": "O tema foi alterado para {theme}"
+}

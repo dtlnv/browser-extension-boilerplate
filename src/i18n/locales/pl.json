@@ -1,0 +1,11 @@
+{
+  "ping-background": "Ping w tle",
+  "get-active-tab-info": "Pobierz informacje o aktywnej karcie",
+  "select-language": "Wybierz język",
+  "language-changed": "Nowy język: {language}",
+  "theme.light": "Jasny",
+  "theme.dark": "Ciemny",
+  "theme.system": "Systemowy",
+  "select-theme": "Wybierz motyw",
+  "theme-changed": "Motyw został zmieniony na {theme}"
+}

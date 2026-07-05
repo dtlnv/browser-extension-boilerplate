@@ -1,0 +1,11 @@
+{
+  "ping-background": "Ping background",
+  "get-active-tab-info": "Get active tab info",
+  "select-language": "Select language",
+  "language-changed": "New language: {language}",
+  "theme.light": "Light",
+  "theme.dark": "Dark",
+  "theme.system": "System",
+  "select-theme": "Select theme",
+  "theme-changed": "Theme has changed to {theme}"
+}
