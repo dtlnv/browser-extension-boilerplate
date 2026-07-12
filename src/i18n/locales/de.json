@@ -7,5 +7,8 @@
   "theme.dark": "Dunkel",
   "theme.system": "System",
   "select-theme": "Design auswählen",
-  "theme-changed": "Design wurde zu {theme} geändert"
+  "theme-changed": "Design wurde zu {theme} geändert",
+  "open-sidepanel": "Seitenbereich öffnen",
+  "sidepanel-heading": "Aktuelle Seite",
+  "sidepanel-empty": "Keine Seite erkannt"
 }

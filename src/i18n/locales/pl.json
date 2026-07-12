@@ -7,5 +7,8 @@
   "theme.dark": "Ciemny",
   "theme.system": "Systemowy",
   "select-theme": "Wybierz motyw",
-  "theme-changed": "Motyw został zmieniony na {theme}"
+  "theme-changed": "Motyw został zmieniony na {theme}",
+  "open-sidepanel": "Otwórz panel boczny",
+  "sidepanel-heading": "Bieżąca strona",
+  "sidepanel-empty": "Nie wykryto strony"
 }

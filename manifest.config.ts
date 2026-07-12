@@ -71,5 +71,14 @@ export function buildManifest(target: ExtensionTarget, env: BuildEnv): Record<st
     };
   }
 
+  if (target === "chromium") {
+    // Chrome/Chromium-only — chrome.sidePanel has no Firefox/Safari equivalent.
+    manifest.side_panel = { default_path: "sidepanel.html" };
+    // "tabs" lets background/index.ts read tab.title/tab.url on non-http(s)
+    // pages (chrome://newtab, chrome://extensions, ...) — http/https pages
+    // already get these via the host-permission grant from content_scripts.matches.
+    (manifest.permissions as string[]).push("sidePanel", "tabs");
+  }
+
   return manifest;
 }

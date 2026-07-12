@@ -48,17 +48,18 @@ async function buildScript(
   }
 }
 
-async function buildStyles(outDir: string, env: BuildEnv) {
-  const input = path.join(ROOT, "src/popup/styles.css");
-  const output = path.join(outDir, "popup.css");
+async function buildStyles(input: string, output: string, outDir: string, env: BuildEnv) {
+  const inputPath = path.join(ROOT, input);
+  const outputPath = path.join(outDir, output);
   const flags = env === "prod" ? ["--minify"] : [];
-  await $`${TAILWIND_BIN} -i ${input} -o ${output} ${flags}`.quiet();
+  await $`${TAILWIND_BIN} -i ${inputPath} -o ${outputPath} ${flags}`.quiet();
 }
 
 async function copyStaticAssets(outDir: string) {
   await cp(path.join(ROOT, "public/icons"), path.join(outDir, "icons"), { recursive: true });
   await cp(path.join(ROOT, "public/_locales"), path.join(outDir, "_locales"), { recursive: true });
   await cp(path.join(ROOT, "src/popup/index.html"), path.join(outDir, "popup.html"));
+  await cp(path.join(ROOT, "src/sidepanel/index.html"), path.join(outDir, "sidepanel.html"));
 }
 
 async function build(target: ExtensionTarget, env: BuildEnv, options: { clean?: boolean } = {}) {
@@ -76,7 +77,9 @@ async function build(target: ExtensionTarget, env: BuildEnv, options: { clean?: 
     buildScript("src/background/index.ts", "background.js", outDir, env, target),
     buildScript("src/content/index.ts", "content.js", outDir, env, target),
     buildScript("src/popup/index.tsx", "popup.js", outDir, env, target),
-    buildStyles(outDir, env),
+    buildScript("src/sidepanel/index.tsx", "sidepanel.js", outDir, env, target),
+    buildStyles("src/popup/styles.css", "popup.css", outDir, env),
+    buildStyles("src/sidepanel/styles.css", "sidepanel.css", outDir, env),
   ]);
 
   await Bun.write(

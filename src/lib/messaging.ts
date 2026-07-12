@@ -9,6 +9,8 @@ export interface MessageMap {
   ping: { request: undefined; response: { pong: true; timestamp: number } };
   getActiveTabInfo: { request: undefined; response: { title: string; url: string } };
   getPageInfo: { request: undefined; response: { title: string; url: string } };
+  getActiveTabTitle: { request: undefined; response: { title: string; url: string } };
+  activeTabChanged: { request: { title: string; url: string }; response: { received: true } };
 }
 
 export type MessageAction = keyof MessageMap;
