@@ -2,6 +2,7 @@
   "name": "browser-extension-boilerplate",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev:chromium": "bun scripts/build.ts --target=chromium --env=dev --watch",

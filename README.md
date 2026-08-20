@@ -160,6 +160,10 @@ Then open the generated Xcode project, run it once to register the app, and enab
 
 No test framework is set up by default — `bun test` is available out of the box if you want to add tests later.
 
+## License
+
+[MIT](LICENSE)
+
 ## Removing demo functionality
 
 Everything below exists only to demonstrate the boilerplate's pieces working end-to-end — delete what you don't need before building a real extension on top of this:
